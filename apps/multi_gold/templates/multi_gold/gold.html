@@ -1,0 +1,38 @@
+<a href="/log_out">Log Out</a>
+<a href="/dashboard">Home</a>
+<a href="/leaderboard">Leader Board</a>
+
+<div>
+    <h2>Cave</h2>
+    <p>+-5 gold</p>
+    <form action="/action" method="post">
+        {% csrf_token %}
+        <input type="submit" name="cave" value="Go to Cave">
+    </form>
+</div>
+<div>
+    <h2>Castle</h2>
+    <p>+-10 gold</p>
+    <form action="/action" method="post">
+        {% csrf_token %}
+        <input type="submit" name="castle" value="Go to Cave">
+    </form>
+</div>
+<div>
+    <h2>farm</h2>
+    <p>+-1 gold</p>
+    <form action="/action" method="post">
+        {% csrf_token %}
+        <input type="submit" name="farm" value="Go to Cave">
+    </form>
+</div>
+<div>
+<h2>Actions</h2>
+{% for moves in actions %}
+        
+            <p>Went to {{moves.place}} and {{moves.result}} {{moves.amount}} gold</p>
+           
+        
+  
+{% endfor %}
+</div>

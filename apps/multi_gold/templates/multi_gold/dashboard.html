@@ -1,0 +1,37 @@
+
+
+<a href="/log_out">Log Out</a>
+<a href="/gold">Play</a>
+<a href="/leaderboard">Leader Board</a>
+
+<h2>Top 5 Players</h2>
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Gold</th>
+    </tr>
+
+
+        <tr>
+            <td><a href="/user/{{top_five.0.name}}">{{top_five.0.name}}</a></td>
+            <td>{{top_five.0.gold}}</td>
+        </tr>
+         <tr>
+            <td><a href="/user/{{top_five.1.name}}">{{top_five.1.name}}</a></td>
+            <td>{{top_five.1.gold}}</td>
+        </tr>
+         <tr>
+            <td><a href="/user/{{top_five.2.name}}">{{top_five.2.name}}</a></td>
+            <td>{{top_five.2.gold}}</td>
+        </tr>
+         <tr>
+            <td><a href="/user/{{top_five.3.name}}">{{top_five.3.name}}</a></td>
+            <td>{{top_five.3.gold}}</td>
+        </tr>
+         <tr>
+            <td><a href="/user/{{top_five.4.name}}">{{top_five.4.name}}</a></td>
+            <td>{{top_five.4.gold}}</td>
+        </tr>
+
+
+</table>

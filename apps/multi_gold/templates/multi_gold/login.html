@@ -1,0 +1,35 @@
+<html>
+    <head>
+       <title>Multi Gold</title>
+       
+       
+    </head>
+    <body>
+        <h1>Welcome</h1>
+        {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+        <h2>Log In</h2>
+        <form action='/login' method='post'>
+            {% csrf_token %}
+            Email: <input type='text' name='email'><br>
+            Password: <input type='password' name='password'><br>
+            <input type='submit' value='Submit'>
+        </form>
+        <h2>Create a User</h2>
+        <form action='/register' method='post'>
+            {% csrf_token %}
+            Name: <input type='text' name='name'><br>
+            Email: <input type='text' name='email'><br>
+            Password: <input type='password' name='password'><br>
+            Confirm Password: <input type='password' name='confirm'><br>
+            <input type='submit' value='Submit'>
+        </form>
+
+    
+    </body>
+</html>

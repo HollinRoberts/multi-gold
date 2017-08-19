@@ -1,0 +1,20 @@
+
+<a href="/log_out">Log Out</a>
+<a href="/dashboard">Home</a>
+<a href="/gold">Play</a>
+
+<h2>All players</h2>
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Gold</th>
+    </tr>
+    {% for players in top_five %}
+        <tr>
+            <td><a href="/user/{{players.name}}">{{players.name}}</a></td>
+            <td>{{players.gold}}</td>
+        </tr>
+  
+    {% endfor %}
+
+</table>

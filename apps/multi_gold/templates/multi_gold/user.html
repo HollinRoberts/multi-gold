@@ -1,0 +1,18 @@
+
+<a href="/log_out">Log Out</a>
+<a href="/gold">Play</a>
+<a href="/dashboard">Home</a>
+<a href="/leaderboard">Leader Board</a>
+
+<h2>Name</h2>
+<p>{{user.0.name}}</p>
+<h2>Gold</h2>
+<p>{{user.0.gold}}</p>
+<h2>Recent Actions</h2>
+{% for moves in actions %}
+        
+            <p>Went to {{moves.place}} and {{moves.result}} {{moves.amount}} gold</p>
+           
+        
+  
+{% endfor %}
